@@ -39,7 +39,7 @@ public class AppUserService implements UserDetailsService {
 
         appUserRepository.save(appUser);
 
-        //TODO: SEND CONFIRMATION TOKEN
+
         String token = UUID.randomUUID().toString();
         ConfirmationToken confirmationToken = new ConfirmationToken(
                 token,
