@@ -1,5 +1,6 @@
 package com.userauth.userauth.registration.token;
 
+import com.userauth.userauth.appuser.AppUser;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,11 +29,19 @@ public class ConfirmationToken {
 
     private LocalDateTime confirmedAt;
 
+    @ManyToOne
+    @JoinColumn(
+            nullable = false,
+            name = "app_user_id"
+    )
+    private AppUser appUser;
 
-    public ConfirmationToken(String token, LocalDateTime createdAt, LocalDateTime expiredAt, LocalDateTime confirmedAt) {
+
+    public ConfirmationToken(String token, LocalDateTime createdAt, LocalDateTime expiredAt, LocalDateTime confirmedAt, AppUser appUser) {
         this.token = token;
         this.createdAt = createdAt;
         this.expiresAt = expiredAt;
         this.confirmedAt = confirmedAt;
+        this.appUser = appUser;
     }
 }
