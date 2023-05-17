@@ -50,7 +50,7 @@ public class AppUserService implements UserDetailsService {
         confirmationTokenService.saveConfirmationToken(confirmationToken);
 
 //       TODO: SEND EMAIl
-        return "Hello World";
+        return token;
 
     }
 }
