@@ -1,7 +1,6 @@
 package com.userauth.userauth.appuser;
 
 import com.userauth.userauth.registration.token.ConfirmationToken;
-import com.userauth.userauth.registration.token.ConfirmationTokenRepository;
 import com.userauth.userauth.registration.token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
